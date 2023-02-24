@@ -69,7 +69,7 @@ The purpose of this lab is to both get you familiar with using these non-github 
             $$T(n) = aT(n/b) + f(n)$$
 
         1. The solution to the recurrence you wrote above as provided by the master theorem:
-            $$T(n) = \Theta()$$
+            $$T(n) = T(n/3) + O(1)$$
 
         (Feel free to check your answers with me before moving on.)
     
@@ -113,16 +113,16 @@ The purpose of this lab is to both get you familiar with using these non-github 
 
     | recurrence           | solution                       | practical application                     |
     | -------------------- | ------------------------------ | ----------------------------------------- |
-    | T(n) = T(n/2) + n    | $\Theta(                    )$ | runtime of the bad binary search          |
-    | T(n) = T(n/2) + 1    | $\Theta(                    )$ | runtime of the correct binary search      |
-    | T(n) = T(n/3) + 1    | $\Theta(                    )$ | runtime of "trinary search"               |
-    | T(n) = 2T(n/2) + 1   | $\Theta(                    )$ | runtime for [finding the median of an unsorted list](https://en.wikipedia.org/wiki/Quickselect) |
-    | T(n) = 2T(n/2) + n   | $\Theta(                    )$ | runtime of merge sort                     |
-    | T(n) = 3T(n/3) + n   | $\Theta(                    )$ | runtime of a trinary merge sort           |
-    | T(n) = T(n/2) + n^2  | $\Theta(                    )$ |                                           |
-    | T(n) = 2T(n/2) + n^2 | $\Theta(                    )$ |                                           |
-    | T(n) = 3T(n/2) + n^2 | $\Theta(                    )$ |                                           |
-    | T(n) = 3T(n/2) + n   | $\Theta(                    )$ | runtime of [Karatsuba's integer multiplication algorithm](https://en.wikipedia.org/wiki/Karatsuba_algorithm); HINT: Case 1 |
+    | T(n) = T(n/2) + n    | $\Theta(f(n)                )$ | runtime of the bad binary search          |
+    | T(n) = T(n/2) + 1    | $\Theta(f(\log^1 n)         )$ | runtime of the correct binary search      |
+    | T(n) = T(n/3) + 1    | $\Theta(\log n              )$ | runtime of "trinary search"               |
+    | T(n) = 2T(n/2) + 1   | $\Theta(n                   )$ | runtime for [finding the median of an unsorted list](https://en.wikipedia.org/wiki/Quickselect) |
+    | T(n) = 2T(n/2) + n   | $\Theta(n \log n            )$ | runtime of merge sort                     |
+    | T(n) = 3T(n/3) + n   | $\Theta(n \log n            )$ | runtime of a trinary merge sort           |
+    | T(n) = T(n/2) + n^2  | $\Theta(\log^{n^2 + 1} n    )$ |                                           |
+    | T(n) = 2T(n/2) + n^2 | $\Theta(f(n)                )$ |                                           |
+    | T(n) = 3T(n/2) + n^2 | $\Theta(f(n)                )$ |                                           |
+    | T(n) = 3T(n/2) + n   | $\Theta(n                   )$ | runtime of [Karatsuba's integer multiplication algorithm](https://en.wikipedia.org/wiki/Karatsuba_algorithm); HINT: Case 1 |
     | T(n) = 7T(n/2) + n^2 | $\Theta(                    )$ | runtime of [Strassen's matrix multiplication algorithm](https://en.wikipedia.org/wiki/Strassen_algorithm) |
 
 1. Upload your changes to github (and not gitlab) by using the following steps.
