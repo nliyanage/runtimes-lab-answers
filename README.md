@@ -82,29 +82,29 @@ The purpose of this lab is to both get you familiar with using these non-github 
 
         |                | `binary_search`           | `trinary_search`      |
         | -------------- | ------------------------- | --------------------- | 
-        | `n=2**0`       |                           |                       |
-        | `n=2**1`       |                           |                       |
-        | `n=2**2`       |                           |                       |
-        | `n=2**3`       |                           |                       |
-        | `n=2**4`       |                           |                       |
-        | `n=2**5`       |                           |                       |
-        | `n=2**6`       |                           |                       |
-        | `n=2**7`       |                           |                       |
-        | `n=2**8`       |                           |                       |
-        | `n=2**9`       |                           |                       |
-        | `n=2**10`      |                           |                       |
-        | `n=2**11`      |                           |                       |
-        | `n=2**12`      |                           |                       |
-        | `n=2**13`      |                           |                       |
-        | `n=2**14`      |                           |                       |
-        | `n=2**15`      |                           |                       |
-        | `n=2**16`      |                           |                       |
-        | `n=2**17`      |                           |                       |
-        | `n=2**18`      |                           |                       |
-        | `n=2**19`      |                           |                       |
-        | `n=2**20`      |                           |                       |
-        | `n=2**21`      |                           |                       |
-        | `n=2**22`      |                           |                       |
+        | `n=2**0`       | .838 usec                 | 1.73 usec             |
+        | `n=2**1`       | 1.47 usec                 | 3.41 usec             |
+        | `n=2**2`       | 2.2 usec                  | 3.34 usec             |
+        | `n=2**3`       | 2.65 usec                 | 3.57 usec             |
+        | `n=2**4`       | 3.14 usec                 | .625 usec             |
+        | `n=2**5`       | 3.7 usec                  | 3.24 usec             |
+        | `n=2**6`       | 4.23 usec                 | 6.51 usec             |
+        | `n=2**7`       | 4.69 usec                 | 5.87 usec             |
+        | `n=2**8`       | 5.68 usec                 | 7.62 usec             |
+        | `n=2**9`       | 5.98 usec                 | 4.75 usec             |
+        | `n=2**10`      | 6.82 usec                 | 7.81 usec             |
+        | `n=2**11`      | 7.06 usec                 | 9.28 usec             |
+        | `n=2**12`      | 7.6 usec                  | 10.6 usec             |
+        | `n=2**13`      | 8.51 usec                 | 10.9 usec             |
+        | `n=2**14`      | 8.98 usec                 | 14.2 usec             |
+        | `n=2**15`      | 9.7 usec                  | 13.4 usec             |
+        | `n=2**16`      | 9.8 usec                  | 16.2 usec             |
+        | `n=2**17`      | 10.6 usec                 | 15.7 usec             |
+        | `n=2**18`      | 12.4 usec                 | 17.1 usec             |
+        | `n=2**19`      | 13 usec                   | 13.9 usec             |
+        | `n=2**20`      | 13.2 usec                 | 19.6 usec             |
+        | `n=2**21`      | 13 usec                   | 18.6 usec             |
+        | `n=2**22`      | 13.5 usec                 | 19.6 usec             |
 
 
 1. Use the master theorem to solve the following recurrence relations,
@@ -122,8 +122,8 @@ The purpose of this lab is to both get you familiar with using these non-github 
     | T(n) = T(n/2) + n^2  | $\Theta(\log^{n^2 + 1} n    )$ |                                           |
     | T(n) = 2T(n/2) + n^2 | $\Theta(f(n)                )$ |                                           |
     | T(n) = 3T(n/2) + n^2 | $\Theta(f(n)                )$ |                                           |
-    | T(n) = 3T(n/2) + n   | $\Theta(n                   )$ | runtime of [Karatsuba's integer multiplication algorithm](https://en.wikipedia.org/wiki/Karatsuba_algorithm); HINT: Case 1 |
-    | T(n) = 7T(n/2) + n^2 | $\Theta(                    )$ | runtime of [Strassen's matrix multiplication algorithm](https://en.wikipedia.org/wiki/Strassen_algorithm) |
+    | T(n) = 3T(n/2) + n   | $\Theta(n \log_2 3          )$ | runtime of [Karatsuba's integer multiplication algorithm](https://en.wikipedia.org/wiki/Karatsuba_algorithm); HINT: Case 1 |
+    | T(n) = 7T(n/2) + n^2 | $\Theta(n^2                 )$ | runtime of [Strassen's matrix multiplication algorithm](https://en.wikipedia.org/wiki/Strassen_algorithm) |
 
 1. Upload your changes to github (and not gitlab) by using the following steps.
 
